@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const emailModel = require("./model");
-const PORT = 3000;
+let PORT = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
