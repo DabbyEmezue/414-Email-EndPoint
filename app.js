@@ -15,7 +15,7 @@ mongoose
   .connect(uri, { useNewUrlParser: true })
   .then(console.log("DB connected"));
 ///
-//da
+
 router.post("/mails", async (req, res) => {
   try {
     const { Email } = req.body;
