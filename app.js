@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const emailModel = require("./model");
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3000 || 5174;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -10,7 +10,7 @@ const uri = process.env.MONGODBURI;
 const cors = require("cors");
 
 //
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 mongoose
   .connect(uri, { useNewUrlParser: true })
